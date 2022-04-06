@@ -1,0 +1,25 @@
+span {
+    position: fixed;
+}
+
+#div0 {
+    position: absolute;
+    top: 70px;
+    left: 80px;
+    border-style: solid;
+    padding-top: 500px;
+    padding-left: 500px;
+    background-color: bisque;
+    border-color: black;
+}
+
+#div1 {
+    position: absolute;
+    top: 70px;
+    left: 600px;
+    border-style: solid;
+    padding-top: 500px;
+    padding-left: 500px;
+    background-color:azure;
+    border-color: black;
+}
