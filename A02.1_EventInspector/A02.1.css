@@ -1,5 +1,6 @@
 span {
     position: fixed;
+    pointer-events: none;
 }
 
 #div0 {
