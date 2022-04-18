@@ -1,0 +1,47 @@
+body header {
+    position: relative;
+    text-align: center;
+    text-decoration: underline dotted;
+}
+
+body {
+    background-color: rgb(28, 28, 28);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+body main {
+    text-align: center;
+}
+
+.Stepper {
+    position: relative;
+    top: 40px;
+}
+
+.Slider {
+    position: relative;
+    top: 60px;
+}
+
+.Color {
+    position: relative;
+    top: 80px;
+}
+
+.Radio {
+    position: relative;
+    top: 100px;
+}
+
+body footer {
+    text-align: center;
+}
+
+#StartGame {
+    position: relative;
+    top: 140px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+}
