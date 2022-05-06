@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <script src="A03.js"></script>
     <link rel="stylesheet" href="A03.css">
 </head>
+
 <body>
     <header>
         <h1>Memory Game</h1>
     </header>
     <main>
-        <input class="Stepper" type="number" name="Stepper" step="2" min="4" max="28" value="0">
+        <input class="Stepper" type="number" name="Stepper" step="2" min="4" max="28" value="2">
         <label class="Stepper" for="Stepper">Number of cards</label>
         <br>
         <input class="Slider" type="range" name="Slider" step="0.1" min="0.5" max="2" value="0">
@@ -22,17 +24,21 @@
         <input class="Color" type="color" name="Color" placeholder="red" id="color" value="#ff0000">
         <label class="Color" for="Color">Color of cards</label>
         <br>
-        <input class="Radio" type="radio" name="Radiogroup" value="radio1">
-        <label class="Radio" for="radio1">Font 1</label>
-        <input class="Radio" type="radio" name="Radiogroup" value="radio2">
-        <label class="Radio" for="radio2">Font 2</label>
-        <input class="Radio" type="radio" name="Radiogroup" value="radio3">
-        <label class="Radio" for="radio3">Font 3</label>
+        <form>
+            <input class="Radio" type="radio" name="Radiogroup" value="radio1">
+            <label class="Radio" for="radio1">Font 1</label>
+            <input class="Radio" type="radio" name="Radiogroup" value="radio2">
+            <label class="Radio" for="radio2">Font 2</label>
+            <input class="Radio" type="radio" name="Radiogroup" value="radio3">
+            <label class="Radio" for="radio3">Font 3</label>
+        </form>
     </main>
 
     <footer>
         <button id="StartGame">Start Game</button>
     </footer>
-    
+    <div id="cardField"></div>
+
 </body>
+
 </html>

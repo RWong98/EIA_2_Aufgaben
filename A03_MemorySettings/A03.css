@@ -14,6 +14,18 @@ body main {
     text-align: center;
 }
 
+.Card {
+    inline-size: 60px;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+}
+
 .Stepper {
     position: relative;
     top: 40px;
@@ -44,4 +56,11 @@ body footer {
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
+}
+
+#cardField {
+    position: relative;
+    text-align: center;
+    top: 170px;
+    padding-bottom: 80px;
 }
