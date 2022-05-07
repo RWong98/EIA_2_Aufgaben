@@ -13,30 +13,37 @@
 <body>
     <header>
         <h1>Memory Game</h1>
+        <span id="timer">00:00</span>
     </header>
+    <div id="menu">
     <main>
-        <input class="Stepper" type="number" name="Stepper" step="2" min="4" max="28" value="2">
+        <input id="stepper" class="Stepper" type="number" name="Stepper" step="2" min="10" max="50" value="10">
         <label class="Stepper" for="Stepper">Number of cards</label>
         <br>
-        <input class="Slider" type="range" name="Slider" step="0.1" min="0.5" max="2" value="0">
+        <input id="slider" class="Slider" type="range" name="Slider" step="10" min="10" max="100" value="20">
         <label class="Slider" for="Slider">Size of cards</label>
         <br>
-        <input class="Color" type="color" name="Color" placeholder="red" id="color" value="#ff0000">
+        <input class="Color" type="color" name="Color" id="color" value="#ff0000">
         <label class="Color" for="Color">Color of cards</label>
         <br>
+        <input class="Color" type="color" name="Color" id="bodycolor" value="#000000">
+        <label class="Color" for="Color">Color of background</label>
+        <br>
+        <input class="Color" type="color" name="Color" id="fontcolor" value="#ffffff">
+        <label class="Color" for="Color">Color of font</label>
         <form>
-            <input class="Radio" type="radio" name="Radiogroup" value="radio1">
-            <label class="Radio" for="radio1">Font 1</label>
-            <input class="Radio" type="radio" name="Radiogroup" value="radio2">
-            <label class="Radio" for="radio2">Font 2</label>
-            <input class="Radio" type="radio" name="Radiogroup" value="radio3">
-            <label class="Radio" for="radio3">Font 3</label>
+            <input id="radio1" class="Radio" type="radio" name="radio" value="Courier New">
+            <label class="Radio" for="radio1">Courier New</label>
+            <input id="radio2" class="Radio" type="radio" name="radio" value="Times New Roman">
+            <label class="Radio" for="radio2">Times New Roman</label>
+            <input id="radio3" class="Radio" type="radio" name="radio" value="Impact" checked>
+            <label class="Radio" for="radio3">Impact</label>
         </form>
     </main>
-
     <footer>
         <button id="StartGame">Start Game</button>
     </footer>
+</div>
     <div id="cardField"></div>
 
 </body>

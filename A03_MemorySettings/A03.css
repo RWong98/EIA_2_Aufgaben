@@ -17,8 +17,10 @@ body main {
 .Card {
     inline-size: 60px;
     margin: 10px;
-    padding: 30px;
     border-radius: 5px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: 2px;
     text-align: center;
     display: inline-flex;
     flex-direction: column;
