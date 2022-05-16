@@ -23,8 +23,9 @@ namespace Beach {
             drawSeagulls({ x: getRandomNumber(50, 450), y: getRandomNumber(200, 400) });
         }
         drawPerson({ x: getRandomNumber(100, 500), y: getRandomNumber(750, 1000) });
-        drawSharkfin({ x: getRandomNumber(100, 500), y: getRandomNumber(500, 600) });
+        // drawSharkfin({ x: getRandomNumber(100, 500), y: getRandomNumber(500, 600) });
         panickedPerson({ x: getRandomNumber(20, 90), y: getRandomNumber(600, 700) });
+        drawSharkfinFull({ x: getRandomNumber(100, 500), y: getRandomNumber(500, 590) });
 
     }
 
@@ -147,6 +148,7 @@ namespace Beach {
         crc2.lineTo(_position.x + -15, _position.y - 60);
         wave(_position.x - 280, _position.y - 390);
         crc2.strokeStyle = "black";
+        crc2.resetTransform();
         crc2.stroke();
         crc2.save();
         crc2.translate(_position.x, _position.y);
@@ -169,23 +171,43 @@ namespace Beach {
         crc2.lineTo(_position.x + 20, _position.y - 30);
         crc2.lineTo(_position.x + 12, _position.y - 20);
         crc2.strokeStyle = "green";
-        crc2.fill();
         crc2.stroke();
     }
 
     //Sharkfin
-    function drawSharkfin(_position: Vector): void {
-        crc2.beginPath();
+    // function drawSharkfin(_position: Vector): void {
+    //     crc2.beginPath();
+    //     crc2.save();
+    //     crc2.lineWidth = 4;
+    //     crc2.lineCap = "round";
+    //     crc2.strokeStyle = "black";
+    //     crc2.moveTo(_position.x + 10, _position.y + 40);
+    //     crc2.lineTo(_position.x - 30, _position.y + 90);
+    //     crc2.moveTo(_position.x + 10, _position.y + 40);
+    //     crc2.lineTo(_position.x + 30, _position.y + 97);
+    //     crc2.stroke();
+    //     crc2.restore();
+    //     wave(_position.x - 280, _position.y - 275);
+    //     crc2.save();
+    //     crc2.translate(_position.x, _position.y);
+    //     crc2.restore();
+    //     crc2.closePath();
 
-        crc2.moveTo(_position.x + 10, _position.y + 40);
-        crc2.lineTo(_position.x - 30, _position.y + 90);
-        crc2.moveTo(_position.x + 10, _position.y + 40);
-        crc2.lineTo(_position.x + 30, _position.y + 97);
+    // }
 
-        wave(_position.x - 280, _position.y - 276);
-
-        crc2.strokeStyle = "black";
-        crc2.stroke();
+    //Sharkfin with grey colour
+    function drawSharkfinFull(_position: Vector): void {
+        crc2.save();
+        let path: Path2D = new Path2D;
+        path.moveTo(_position.x - 30, _position.y + 90);
+        path.lineTo(_position.x + 10, _position.y + 40);
+        path.lineTo(_position.x + 30, _position.y + 97);
+        path.quadraticCurveTo(_position.x + 19, _position.y + 90, _position.x + 10, _position.y + 90);
+        path.quadraticCurveTo(_position.x - 5, _position.y + 107, _position.x - 20, _position.y + 90);
+        crc2.fillStyle = "grey";
+        crc2.fill(path);
+        crc2.restore();
+        wave(_position.x - 280, _position.y - 275);
         crc2.save();
         crc2.translate(_position.x, _position.y);
         crc2.restore();
@@ -208,5 +230,6 @@ namespace Beach {
         crc2.moveTo(325, 370);
         crc2.stroke();
         crc2.restore();
+
     }
 }
