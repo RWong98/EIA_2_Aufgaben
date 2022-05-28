@@ -39,9 +39,8 @@ namespace Beach {
 
 
         drawBackground();
-        for (let i: number = 0; i < 10; i++) {
-            drawGrass({ x: getStartPosition(100, 500), y: getStartPosition(800, 1000) });
-        }
+        
+        drawGrass({ x: getStartPosition(100, 500), y: getStartPosition(800, 1000) });
         drawSun({ x: 100, y: 75 });
         drawCloud({ x: 400, y: 125 }, { x: 150, y: 75 });
 
